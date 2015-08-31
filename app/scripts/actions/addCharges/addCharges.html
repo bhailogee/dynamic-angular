@@ -1,0 +1,111 @@
+<div class="modal" style="display:{{displayPopUp}};" id="addCharges" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="ng-scope close" type="button" ng-class="close" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">Add Charges</h2>
+			</div>
+
+			<div  class="modal-body">
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=Charges>Charges : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="Charges"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=AccountID>Account : </label>
+					</div>
+					
+					<div class="col-md-4"><dropdown-directive model="AccountID" datasource="LS_accounts" textfield="v_UserName" valuefield="v_AccountID" ></dropdown-directive>
+					</div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=ChargeHeadID>Charge Head : </label>
+					</div>
+					
+					<div class="col-md-4"><dropdown-directive model="ChargeHeadID" datasource="LS_chargeheads" textfield="v_ChargeHeadID" valuefield="v_ChargeHeadID" ></dropdown-directive>
+					</div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=AccNoPBCInstanceID>Acc No P B C Instance : </label>
+					</div>
+					
+					<div class="col-md-4"><dropdown-directive model="AccNoPBCInstanceID" datasource="LS_accnopbcinstances" textfield="v_AccNoPBCInstanceID" valuefield="v_AccNoPBCInstanceID" ></dropdown-directive>
+					</div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=SubscriptionID>Subscription : </label>
+					</div>
+					
+					<div class="col-md-4"><dropdown-directive model="SubscriptionID" datasource="LS_subscriptions" textfield="v_SubscriptionType" valuefield="v_SubscriptionID" ></dropdown-directive>
+					</div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=ChargeCount>Charge Count : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="ChargeCount"  />
+					<div class="col-md-2"></div></div>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<a class="btn btn-primary" type="button" ng-click="fnaddCharges();">Update<span class="glyphicon glyphicon-ok"></span>
+				</a>
+				<input value="Close" class="btn" type="button" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fieldset">
+
+	<h1 class="legend"> Add Charges </h1>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=Charges>Charges : </label>
+		{{Charges}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=AccountID>Account : </label>
+		{{AccountID}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=ChargeHeadID>Charge Head : </label>
+		{{ChargeHeadID}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=AccNoPBCInstanceID>Acc No P B C Instance : </label>
+		{{AccNoPBCInstanceID}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=SubscriptionID>Subscription : </label>
+		{{SubscriptionID}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=ChargeCount>Charge Count : </label>
+		{{ChargeCount}}
+	</div>
+
+<button type="button" class="btn btn-primary" ng-click="displayPopUp = ''" data-toggle="modal" data-target="#addCharges">Add Charges</button>
+
+</div>

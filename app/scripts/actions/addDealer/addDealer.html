@@ -1,0 +1,41 @@
+<div class="modal" style="display:{{displayPopUp}};" id="addDealer" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="ng-scope close" type="button" ng-class="close" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">Add Dealer</h2>
+			</div>
+
+			<div  class="modal-body">
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=DealerName>Dealer Name : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="DealerName"  />
+					<div class="col-md-2"></div></div>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<a class="btn btn-primary" type="button" ng-click="fnaddDealer();">Update<span class="glyphicon glyphicon-ok"></span>
+				</a>
+				<input value="Close" class="btn" type="button" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fieldset">
+
+	<h1 class="legend"> Add Dealer </h1>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=DealerName>Dealer Name : </label>
+		{{DealerName}}
+	</div>
+
+<button type="button" class="btn btn-primary" ng-click="displayPopUp = ''" data-toggle="modal" data-target="#addDealer">Add Dealer</button>
+
+</div>

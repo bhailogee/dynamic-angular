@@ -1,0 +1,55 @@
+<div class="modal" style="display:{{displayPopUp}};" id="createAgent" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="ng-scope close" type="button" ng-class="close" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">Create Agent</h2>
+			</div>
+
+			<div  class="modal-body">
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=AgentName>Agent Name : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="AgentName"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=CurrencyID>Currency : </label>
+					</div>
+					
+					<div class="col-md-4"><dropdown-directive model="CurrencyID" datasource="LS_currencys" textfield="v_CurrencyID" valuefield="v_CurrencyID" ></dropdown-directive>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<a class="btn btn-primary" type="button" ng-click="fncreateAgent();">Update<span class="glyphicon glyphicon-ok"></span>
+				</a>
+				<input value="Close" class="btn" type="button" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fieldset">
+
+	<h1 class="legend"> Create Agent </h1>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=AgentName>Agent Name : </label>
+		{{AgentName}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=CurrencyID>Currency : </label>
+		{{CurrencyID}}
+	</div>
+
+<button type="button" class="btn btn-primary" ng-click="displayPopUp = ''" data-toggle="modal" data-target="#createAgent">Create Agent</button>
+
+</div>

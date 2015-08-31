@@ -1,0 +1,83 @@
+<div class="modal" style="display:{{displayPopUp}};" id="addFiredEvent" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" ng-class="close" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">Add Fired Event</h2>
+			</div>
+
+			<div  class="modal-body">
+
+				<div  class="form-group">
+
+					<label class="applabel" title=EventHandlerID>Event Handler : </label>
+					<dropdown-directive model="EventHandlerID" datasource="LS_eventhandlers" textfield="v_EventHandlerName" valuefield="v_EventHandlerID" ></dropdown-directive>
+
+				</div>
+
+				<div  class="form-group">
+
+					<label class="applabel" title=EventTypeID>Event Type : </label>
+					<dropdown-directive model="EventTypeID" datasource="LS_eventtypes" textfield="v_EventTypeName" valuefield="v_EventTypeID" ></dropdown-directive>
+
+				</div>
+
+				<div  class="form-group">
+
+					<label class="applabel" title=PrimaryKeyValue>Primary Key Value : </label>
+					<input type="text" ng-model="PrimaryKeyValue"  />
+
+				</div>
+
+				<div  class="form-group">
+
+					<label class="applabel" title=FiredEventData>Fired Event Data : </label>
+					<input type="text" ng-model="FiredEventData"  />
+
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<a class="btn btn-primary" type="button" ng-click="fnaddFiredEvent();">Update<span class="glyphicon glyphicon-ok"></span>
+				</a>
+				<input value="Close" class="btn" type="button" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fieldset">
+
+	<h1 class="legend"> Add Fired Event </h1>
+
+	<div  class="form-group">
+
+		<label class="applabel" title=EventHandlerID>Event Handler : </label>
+	{{EventHandlerID}}
+
+		</div>
+
+	<div  class="form-group">
+
+		<label class="applabel" title=EventTypeID>Event Type : </label>
+	{{EventTypeID}}
+
+		</div>
+
+	<div  class="form-group">
+
+		<label class="applabel" title=PrimaryKeyValue>Primary Key Value : </label>
+	{{PrimaryKeyValue}}
+
+		</div>
+
+	<div  class="form-group">
+
+		<label class="applabel" title=FiredEventData>Fired Event Data : </label>
+	{{FiredEventData}}
+
+		</div>
+
+<br/><br/><button type="button" class="btn btn-primary" ng-click="displayPopUp = ''" data-toggle="modal" data-target="#addFiredEvent">Add Fired Event</button>
+
+</div>

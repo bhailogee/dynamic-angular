@@ -1,0 +1,83 @@
+<div class="modal" style="display:{{displayPopUp}};" id="addIPPool" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="ng-scope close" type="button" ng-class="close" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">Add I P Pool</h2>
+			</div>
+
+			<div  class="modal-body">
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=IPPoolName>I P Pool Name : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="IPPoolName"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=IPVersion>I P Version : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="IPVersion"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=StartingIP>Starting I P : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="StartingIP"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=EndingIP>Ending I P : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="EndingIP"  />
+					<div class="col-md-2"></div></div>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<a class="btn btn-primary" type="button" ng-click="fnaddIPPool();">Update<span class="glyphicon glyphicon-ok"></span>
+				</a>
+				<input value="Close" class="btn" type="button" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fieldset">
+
+	<h1 class="legend"> Add I P Pool </h1>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=IPPoolName>I P Pool Name : </label>
+		{{IPPoolName}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=IPVersion>I P Version : </label>
+		{{IPVersion}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=StartingIP>Starting I P : </label>
+		{{StartingIP}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=EndingIP>Ending I P : </label>
+		{{EndingIP}}
+	</div>
+
+<button type="button" class="btn btn-primary" ng-click="displayPopUp = ''" data-toggle="modal" data-target="#addIPPool">Add I P Pool</button>
+
+</div>

@@ -1,0 +1,41 @@
+<div class="modal" style="display:{{displayPopUp}};" id="refundReceipt" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="ng-scope close" type="button" ng-class="close" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">Refund Receipt</h2>
+			</div>
+
+			<div  class="modal-body">
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=ReceiptID>Receipt : </label>
+					</div>
+					
+					<div class="col-md-4"><dropdown-directive model="ReceiptID" datasource="LS_receipts" textfield="v_ReceiptID" valuefield="v_ReceiptID" ></dropdown-directive>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<a class="btn btn-primary" type="button" ng-click="fnrefundReceipt();">Update<span class="glyphicon glyphicon-ok"></span>
+				</a>
+				<input value="Close" class="btn" type="button" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fieldset">
+
+	<h1 class="legend"> Refund Receipt </h1>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=ReceiptID>Receipt : </label>
+		{{ReceiptID}}
+	</div>
+
+<button type="button" class="btn btn-primary" ng-click="displayPopUp = ''" data-toggle="modal" data-target="#refundReceipt">Refund Receipt</button>
+
+</div>

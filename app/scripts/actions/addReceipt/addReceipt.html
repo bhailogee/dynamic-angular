@@ -1,0 +1,209 @@
+<div class="modal" style="display:{{displayPopUp}};" id="addReceipt" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="ng-scope close" type="button" ng-class="close" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">Add Receipt</h2>
+			</div>
+
+			<div  class="modal-body">
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=_ReceiptID>_ Receipt : </label>
+					</div>
+					
+					<div class="col-md-4"><dropdown-directive model="_ReceiptID" datasource="LS__receipts" textfield="v__ReceiptID" valuefield="v__ReceiptID" ></dropdown-directive>
+					</div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=ABMFID>A B M F : </label>
+					</div>
+					
+					<div class="col-md-4"><dropdown-directive model="ABMFID" datasource="LS_abmfs" textfield="v_ABMFID" valuefield="v_ABMFID" ></dropdown-directive>
+					</div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=PrepaidCardID>Prepaid Card : </label>
+					</div>
+					
+					<div class="col-md-4"><dropdown-directive model="PrepaidCardID" datasource="LS_prepaidcards" textfield="v_PrepaidCardID" valuefield="v_PrepaidCardID" ></dropdown-directive>
+					</div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=Amount>Amount : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="Amount"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=DeferredCommission>Deferred Commission : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="DeferredCommission"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=InstrumentNumber>Instrument Number : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="InstrumentNumber"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=PaymentMode>Payment Mode : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="PaymentMode"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=Remarks>Remarks : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="Remarks"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=RemoteIP>Remote I P : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="RemoteIP"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=HasPaymentTaxes>Has Payment Taxes : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="HasPaymentTaxes"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=OpaqueData1>Opaque Data1 : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="OpaqueData1"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=OpaqueData2>Opaque Data2 : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="OpaqueData2"  />
+					<div class="col-md-2"></div></div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=OpaqueData3>Opaque Data3 : </label>
+					</div>
+					
+					<div class="col-md-4"><input type="text" ng-model="OpaqueData3"  />
+					<div class="col-md-2"></div></div>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<a class="btn btn-primary" type="button" ng-click="fnaddReceipt();">Update<span class="glyphicon glyphicon-ok"></span>
+				</a>
+				<input value="Close" class="btn" type="button" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fieldset">
+
+	<h1 class="legend"> Add Receipt </h1>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=_ReceiptID>_ Receipt : </label>
+		{{_ReceiptID}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=ABMFID>A B M F : </label>
+		{{ABMFID}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=PrepaidCardID>Prepaid Card : </label>
+		{{PrepaidCardID}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=Amount>Amount : </label>
+		{{Amount}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=DeferredCommission>Deferred Commission : </label>
+		{{DeferredCommission}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=InstrumentNumber>Instrument Number : </label>
+		{{InstrumentNumber}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=PaymentMode>Payment Mode : </label>
+		{{PaymentMode}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=Remarks>Remarks : </label>
+		{{Remarks}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=RemoteIP>Remote I P : </label>
+		{{RemoteIP}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=HasPaymentTaxes>Has Payment Taxes : </label>
+		{{HasPaymentTaxes}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=OpaqueData1>Opaque Data1 : </label>
+		{{OpaqueData1}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=OpaqueData2>Opaque Data2 : </label>
+		{{OpaqueData2}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=OpaqueData3>Opaque Data3 : </label>
+		{{OpaqueData3}}
+	</div>
+
+<button type="button" class="btn btn-primary" ng-click="displayPopUp = ''" data-toggle="modal" data-target="#addReceipt">Add Receipt</button>
+
+</div>

@@ -1,0 +1,69 @@
+<div class="modal" style="display:{{displayPopUp}};" id="blkSellSeries" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="ng-scope close" type="button" ng-class="close" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">Blk Sell Series</h2>
+			</div>
+
+			<div  class="modal-body">
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=PrepaidCardSeriesID>Prepaid Card Series : </label>
+					</div>
+					
+					<div class="col-md-4"><dropdown-directive model="PrepaidCardSeriesID" datasource="LS_prepaidcardseriess" textfield="v_PrepaidCardSeriesID" valuefield="v_PrepaidCardSeriesID" ></dropdown-directive>
+					</div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=DealerID>Dealer : </label>
+					</div>
+					
+					<div class="col-md-4"><dropdown-directive model="DealerID" datasource="LS_dealers" textfield="v_DealerName" valuefield="v_DealerID" ></dropdown-directive>
+					</div>
+				</div>
+
+				<div class="row"><div class="col-md-2"></div>
+					<div class="col-md-4">
+						<label title=DealerCardSaleID>Dealer Card Sale : </label>
+					</div>
+					
+					<div class="col-md-4"><dropdown-directive model="DealerCardSaleID" datasource="LS_dealercardsales" textfield="v_DealerCardSaleID" valuefield="v_DealerCardSaleID" ></dropdown-directive>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<a class="btn btn-primary" type="button" ng-click="fnblkSellSeries();">Update<span class="glyphicon glyphicon-ok"></span>
+				</a>
+				<input value="Close" class="btn" type="button" data-dismiss="modal" aria-label="Close" ng-click="displayPopUp = 'none'"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fieldset">
+
+	<h1 class="legend"> Blk Sell Series </h1>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=PrepaidCardSeriesID>Prepaid Card Series : </label>
+		{{PrepaidCardSeriesID}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=DealerID>Dealer : </label>
+		{{DealerID}}
+	</div>
+
+	<div  class="ng-scope">
+		<label class="applabel" title=DealerCardSaleID>Dealer Card Sale : </label>
+		{{DealerCardSaleID}}
+	</div>
+
+<button type="button" class="btn btn-primary" ng-click="displayPopUp = ''" data-toggle="modal" data-target="#blkSellSeries">Blk Sell Series</button>
+
+</div>

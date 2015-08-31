@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>    
+    <script src="bower_components/moment/moment.js"></script>    
+    <script src="bower_components/angular/angular.js"></script>    
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>    
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/promise/promise.js"></script>
+    <script src="bower_components/ng-lodash/build/ng-lodash.min.js"></script>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />  
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>  
+    <link href="bower_components/ngtoast/dist/ngToast.min.css" rel="stylesheet" />
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/ngtoast/dist/ngToast.min.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+    <script src="bower_components/pdfmake/build/pdfmake.min.js"></script>
+    <script src="bower_components/pdfmake/build/vfs_fonts.js"></script>    
+    <script src="bower_components/angular-validation/dist/angular-validation.js"></script>    
+    <script src="bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
+    <script src="bower_components/angular-ui-mask/dist/mask.min.js"></script>
+
+    <script src="scripts/lib/spahql.js"></script>
+
+
+    
+    
+    
+    <link href="styles/app.css" rel="stylesheet" />
+    <link href="styles/appbootstrapchanges.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bower_components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css"/>
+    <link href="styles/menu.css" rel="stylesheet" />
+
+    <script src="app.js"></script>
+    <script src="scripts/actions/activateSubscriber/activateSubscriber.js"></script>
+    <script src="scripts/actions/addAccNoCounterMatchingData/addAccNoCounterMatchingData.js"></script>
+    <script src="scripts/actions/addAccNoMessage/addAccNoMessage.js"></script>
+    <script src="scripts/actions/addAccNoPBCInstance/addAccNoPBCInstance.js"></script>
+    <script src="scripts/actions/addAccount/addAccount.js"></script>
+    <script src="scripts/actions/addAdministrator/addAdministrator.js"></script>
+    <script src="scripts/actions/addAgentAdjustment/addAgentAdjustment.js"></script>
+    <script src="scripts/actions/addAgentPayment/addAgentPayment.js"></script>
+    <script src="scripts/actions/addCharges/addCharges.js"></script>
+    <script src="scripts/actions/addDealer/addDealer.js"></script>
+    <script src="scripts/actions/addDealerCardSale/addDealerCardSale.js"></script>
+    <script src="scripts/actions/addDealerPayment/addDealerPayment.js"></script>
+    <script src="scripts/actions/addDealerSale/addDealerSale.js"></script>
+    <script src="scripts/actions/addDealerToDealerTransfer/addDealerToDealerTransfer.js"></script>
+    <script src="scripts/actions/addDialPlanRoute/addDialPlanRoute.js"></script>
+    <script src="scripts/actions/addFiredEvent/addFiredEvent.js"></script>
+    <script src="scripts/actions/addIPPool/addIPPool.js"></script>
+    <script src="scripts/actions/addInvoiceReceiptAdjustment/addInvoiceReceiptAdjustment.js"></script>
+    <script src="scripts/actions/addNewAccNoPBCInstance/addNewAccNoPBCInstance.js"></script>
+    <script src="scripts/actions/addOnDemandSOSale/addOnDemandSOSale.js"></script>
+    <script src="scripts/actions/addOndemandserviceoffering/addOndemandserviceoffering.js"></script>
+    <script src="scripts/actions/addPAYGAccNoCounterOffering/addPAYGAccNoCounterOffering.js"></script>
+    <script src="scripts/actions/addPolicyPrefix/addPolicyPrefix.js"></script>
+    <script src="scripts/actions/addProcessedCtrUnitsBonus/addProcessedCtrUnitsBonus.js"></script>
+    <script src="scripts/actions/addReceipt/addReceipt.js"></script>
+    <script src="scripts/actions/addSOCtrAccNoCtrOffering/addSOCtrAccNoCtrOffering.js"></script>
+    <script src="scripts/actions/addVendPaymentInvAdjust/addVendPaymentInvAdjust.js"></script>
+    <script src="scripts/actions/addVendorAdjustment/addVendorAdjustment.js"></script>
+    <script src="scripts/actions/addVendorPayment/addVendorPayment.js"></script>
+    <script src="scripts/actions/addWorkFlowInstanceTransition/addWorkFlowInstanceTransition.js"></script>
+    <script src="scripts/actions/adjustBalance/adjustBalance.js"></script>
+    <script src="scripts/actions/assignAccNoCounterOffering/assignAccNoCounterOffering.js"></script>
+    <script src="scripts/actions/assignAccNoServiceOffering/assignAccNoServiceOffering.js"></script>
+    <script src="scripts/actions/assignDIDToAccNo/assignDIDToAccNo.js"></script>
+    <script src="scripts/actions/assignDIDToAccNoServiceOff/assignDIDToAccNoServiceOff.js"></script>
+    <script src="scripts/actions/assignHuntGroupToSiteGroup/assignHuntGroupToSiteGroup.js"></script>
+    <script src="scripts/actions/assignPBCToAccNo/assignPBCToAccNo.js"></script>
+    <script src="scripts/actions/assignPlanToAccNo/assignPlanToAccNo.js"></script>
+    <script src="scripts/actions/blkCancelPPCardSeriesByRange/blkCancelPPCardSeriesByRange.js"></script>
+    <script src="scripts/actions/blkCancelSeries/blkCancelSeries.js"></script>
+    <script src="scripts/actions/blkPopulateInvoices/blkPopulateInvoices.js"></script>
+    <script src="scripts/actions/blkSellPPCardSeriesByRange/blkSellPPCardSeriesByRange.js"></script>
+    <script src="scripts/actions/blkSellSeries/blkSellSeries.js"></script>
+    <script src="scripts/actions/cancelPrepaidCard/cancelPrepaidCard.js"></script>
+    <script src="scripts/actions/changeAccNoABMF/changeAccNoABMF.js"></script>
+    <script src="scripts/actions/changeAccNoPasswordByAccNo/changeAccNoPasswordByAccNo.js"></script>
+    <script src="scripts/actions/changeAccNoPasswordByAdmin/changeAccNoPasswordByAdmin.js"></script>
+    <script src="scripts/actions/changeDealerPINByAdmin/changeDealerPINByAdmin.js"></script>
+    <script src="scripts/actions/changeDealerPINByDealer/changeDealerPINByDealer.js"></script>
+    <script src="scripts/actions/changeIsCorporateABMF/changeIsCorporateABMF.js"></script>
+    <script src="scripts/actions/changeSubscriberState/changeSubscriberState.js"></script>
+    <script src="scripts/actions/checkPINIfRedeemable/checkPINIfRedeemable.js"></script>
+    <script src="scripts/actions/closeSubscriber/closeSubscriber.js"></script>
+    <script src="scripts/actions/createAgent/createAgent.js"></script>
+    <script src="scripts/actions/decreaseBalance/decreaseBalance.js"></script>
+    <script src="scripts/actions/deductNonUsageCharges/deductNonUsageCharges.js"></script>
+    <script src="scripts/actions/headerBanner/headerBanner.js"></script>
+    <script src="scripts/actions/increaseBalance/increaseBalance.js"></script>
+    <script src="scripts/actions/insertCPEMacAndProfile/insertCPEMacAndProfile.js"></script>
+    <script src="scripts/actions/insertCallingNumberByAccno/insertCallingNumberByAccno.js"></script>
+    <script src="scripts/actions/lapseCounterUnits/lapseCounterUnits.js"></script>
+    <script src="scripts/actions/matchDialPlanRoute/matchDialPlanRoute.js"></script>
+    <script src="scripts/actions/modAccNoSONWFuncSrvProfileID/modAccNoSONWFuncSrvProfileID.js"></script>
+    <script src="scripts/actions/modSOCOunterUpdExistInstAll/modSOCOunterUpdExistInstAll.js"></script>
+    <script src="scripts/actions/modVendorSubInvInvoiceID/modVendorSubInvInvoiceID.js"></script>
+    <script src="scripts/actions/modifyAccNoCntrInstTotalUnt/modifyAccNoCntrInstTotalUnt.js"></script>
+    <script src="scripts/actions/modifyAccNoServiceOffering/modifyAccNoServiceOffering.js"></script>
+    <script src="scripts/actions/modifyAdministratorPassword/modifyAdministratorPassword.js"></script>
+    <script src="scripts/actions/modifyDCPortAssignToAccNo/modifyDCPortAssignToAccNo.js"></script>
+    <script src="scripts/actions/modifyPBCforAccNo/modifyPBCforAccNo.js"></script>
+    <script src="scripts/actions/mrkActivSessionCoARequestTS/mrkActivSessionCoARequestTS.js"></script>
+    <script src="scripts/actions/mrkRDSessCoARequstTSByAccNo/mrkRDSessCoARequstTSByAccNo.js"></script>
+    <script src="scripts/actions/mrkSessCoARequstTSByAccNoSO/mrkSessCoARequstTSByAccNoSO.js"></script>
+    <script src="scripts/actions/newAccNoPBCInstance/newAccNoPBCInstance.js"></script>
+    <script src="scripts/actions/pauseOutboundCampaign/pauseOutboundCampaign.js"></script>
+    <script src="scripts/actions/populateABMFInvoiceByDates/populateABMFInvoiceByDates.js"></script>
+    <script src="scripts/actions/populateVendorInvoices/populateVendorInvoices.js"></script>
+    <script src="scripts/actions/processSIPTrunkCharges/processSIPTrunkCharges.js"></script>
+    <script src="scripts/actions/purchaseCounterAddOn/purchaseCounterAddOn.js"></script>
+    <script src="scripts/actions/purgeExpiredServiceProfile/purgeExpiredServiceProfile.js"></script>
+    <script src="scripts/actions/redeemVoucherBySelfCare/redeemVoucherBySelfCare.js"></script>
+    <script src="scripts/actions/redoVendorRating/redoVendorRating.js"></script>
+    <script src="scripts/actions/refundCharges/refundCharges.js"></script>
+    <script src="scripts/actions/refundCounterConsumedUnits/refundCounterConsumedUnits.js"></script>
+    <script src="scripts/actions/refundReceipt/refundReceipt.js"></script>
+    <script src="scripts/actions/remAccNoCounterOfferingsRS/remAccNoCounterOfferingsRS.js"></script>
+    <script src="scripts/actions/remCounterPrefixByCounterID/remCounterPrefixByCounterID.js"></script>
+    <script src="scripts/actions/remCounterTimeSlotByCounter/remCounterTimeSlotByCounter.js"></script>
+    <script src="scripts/actions/remCtrCallingStPrefixByCtr/remCtrCallingStPrefixByCtr.js"></script>
+    <script src="scripts/actions/remCtrFramedIPPrefixByCtr/remCtrFramedIPPrefixByCtr.js"></script>
+    <script src="scripts/actions/remCtrRealmPrefixByCounter/remCtrRealmPrefixByCounter.js"></script>
+    <script src="scripts/actions/remPolicyPrefixByPolicy/remPolicyPrefixByPolicy.js"></script>
+    <script src="scripts/actions/remRawPolicyDataByPolicy/remRawPolicyDataByPolicy.js"></script>
+    <script src="scripts/actions/removeAccNoServiceOffering/removeAccNoServiceOffering.js"></script>
+    <script src="scripts/actions/resetABMFRateMultiplier/resetABMFRateMultiplier.js"></script>
+    <script src="scripts/actions/resetABMFSubsChrgMultiplier/resetABMFSubsChrgMultiplier.js"></script>
+    <script src="scripts/actions/resetAccNoRateMultiplier/resetAccNoRateMultiplier.js"></script>
+    <script src="scripts/actions/resetCounterToFullByAccNoSO/resetCounterToFullByAccNoSO.js"></script>
+    <script src="scripts/actions/resetCtrSubUnitsByCounterID/resetCtrSubUnitsByCounterID.js"></script>
+    <script src="scripts/actions/resetTechPrefixAccount/resetTechPrefixAccount.js"></script>
+    <script src="scripts/actions/revokeDIDFromAccNo/revokeDIDFromAccNo.js"></script>
+    <script src="scripts/actions/sellPrepaidCard/sellPrepaidCard.js"></script>
+    <script src="scripts/actions/setAccNoSOLifeCycleTS/setAccNoSOLifeCycleTS.js"></script>
+    <script src="scripts/actions/setAccNoSOLifeCycleTSAll/setAccNoSOLifeCycleTSAll.js"></script>
+    <script src="scripts/actions/transferbalance/transferBalance.js"></script>
+    <script src="scripts/actions/unPauseOutboundCampaign/unPauseOutboundCampaign.js"></script>
+    <script src="scripts/actions/updAccNoSONWFuncSrvProfID/updAccNoSONWFuncSrvProfID.js"></script>
+    <script src="scripts/actions/updAccNoSOQueueSrvProfID/updAccNoSOQueueSrvProfID.js"></script>
+    <script src="scripts/actions/voluntaryUnblockSubscriber/voluntaryUnblockSubscriber.js"></script>
+    <script src="scripts/constants/APIConstants.js"></script>
+    <script src="scripts/constants/appConfig.js"></script>
+    <script src="scripts/controllers/ApplicationController.js"></script>
+    <script src="scripts/lib/spahql.js"></script>
+    <script src="scripts/modules/authentication/failedAuthentication/failedauth.js"></script>
+    <script src="scripts/modules/authentication/login/login.js"></script>
+    <script src="scripts/modules/authentication/logout/logout.js"></script>
+    <script src="scripts/modules/dashboard/dashboard.js"></script>
+    <script src="scripts/modules/deletepanel/deletepanel.js"></script>
+    <script src="scripts/modules/detailspanel/detailspanel.js"></script>
+    <script src="scripts/modules/editpanel/editpanel.js"></script>
+    <script src="scripts/modules/helpingmodules/dropdown/dropdown.js"></script>
+    <script src="scripts/modules/insertpanel/insertpanel.js"></script>
+    <script src="scripts/modules/listpanel/listpanel.js"></script>
+    <script src="scripts/modules/main/main.js"></script>
+    <script src="scripts/modules/menu/menu.js"></script>
+    <script src="scripts/modules/notifications/notifyToast.js"></script>
+    <script src="scripts/modules/searchpanel/searchpanel.js"></script>
+    <script src="scripts/services/ApplicationService.js"></script>
+    <script src="scripts/services/AuthenticationService.js"></script>
+    <script src="scripts/services/DataService.js"></script>
+    <script src="scripts/services/MaskingService.js"></script>
+    <script src="scripts/services/ModelHolderService.js"></script>
+    <script src="scripts/services/RolesService.js"></script>
+    <script src="scripts/services/RuntimeStates.js"></script>
+    <script src="scripts/services/SchemaService.js"></script>
+    <script src="scripts/services/SessionService.js"></script>
+    <script src="scripts/services/SpahFactory.js"></script>
+    <script src="scripts/services/UserConfigurationService.js"></script>
+    <script src="scripts/services/UtilityService.js"></script>
+    <script src="scripts/services/ValidationRules.js"></script>
+    
+    
+    <link href="bower_components/angular-ui-grid/ui-grid.min.css" rel="stylesheet" />
+    
+</head>
+
+<body ng-controller="ApplicationController">
+    <toast></toast>
+    <span>{{State2}}</span>
+    <div class="container-fluid"  ui-view="mainView">
+
+    </div>
+  
+</body>
+</html>
