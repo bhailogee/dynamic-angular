@@ -4,13 +4,13 @@ var express = require('express');
 var app = express();
 
 var bodyParser = require('body-parser');
-var config = require('./config/config');
+var config = require('config');
 
 // port to listen
-var port = config.port;
+var port = config.Server.http.port;
 
 // Routes Configurations
-var apiRoutes = require('./codeBehindRoutes');
+var apiRoutes = require('./routes');
 
 
 // Middleware set to to use bodyParser, uses url Encoder, then every data type will be included for parsing
