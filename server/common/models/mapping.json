@@ -1,0 +1,39 @@
+{
+  "name": "mapping",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "propertyType": {
+      "type": "string"
+    },
+    "propertyName": {
+      "type": "string"
+    },
+    "validationRegex": {
+      "type": "string"
+    },
+    "mappingFunction": {
+      "type": "string"
+    },
+    "resultingName": {
+      "type": "string"
+    },
+    "whereToGetIt": {
+      "type": "string"
+    },
+    "whereToGetItPath": {
+      "type": "string"
+    },
+    "remoteapiID": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

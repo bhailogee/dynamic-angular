@@ -29,4 +29,4 @@ app.use('/server', apiRoutes);
 
 app.listen(port);
 
-console.log("Server Startedd");
+console.log("Server Started");

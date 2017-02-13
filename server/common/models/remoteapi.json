@@ -1,0 +1,26 @@
+{
+  "name": "remoteapi",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "apiName": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
