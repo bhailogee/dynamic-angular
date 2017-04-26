@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 
 var bodyParser = require('body-parser');
-var config = require('./config/config');
+var config = require('./config2/config');
 
 // port to listen
 var port = config.port;
