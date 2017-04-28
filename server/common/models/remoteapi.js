@@ -1,29 +1,23 @@
+module.exports = function(Remoteapi) {
+    Remoteapi.createApi=function(apiName,cb) {
 
-
-var app = require("../../server/server");
-module.exports = function(Remoteapis) {
-
-
-
-    Remoteapis.createApi=function(apiName,cb){
-
-        app.models.remoteapi.find(function(err,_remotes){
-           if(err)
-           {
-               cb(err,null);
-           }
-            for(var i=0;i<_remotes++;i++)
-            {
-                var db = _remotes[ii]["datasources"] || app.dataSources.db;
-                var api = db.buildModelFromInstance(_remotes[ii]["apiName"], user, {idInjection: true});
-
+        Remoteapi.app.models.remoteapi.find(function (err, _remotes) {
+            if (err) {
+                cb(err, null);
             }
         });
+        Remoteapi.app.model(Remoteapi.app.dataSources.db.createModel("a.b"));
+        Remoteapi.app.model(Remoteapi.app.dataSources.db.createModel("a.c"));
+        Remoteapi.app.model(Remoteapi.app.dataSources.db.createModel("b"));
+        Remoteapi.app.model(Remoteapi.app.dataSources.db.createModel("a"));
+        Remoteapi.app.model(Remoteapi.app.dataSources.db.createModel("c"));
+
+
 
     }
 
 
-    Remoteapis.remoteMethod(
+    Remoteapi.remoteMethod(
         'createApi', {
             accepts: {
                 arg: 'apiName',
@@ -38,3 +32,14 @@ module.exports = function(Remoteapis) {
 
 
 };
+var extend = require('util')._extend;
+var loopback = require('loopback');
+
+function createModel(options) {
+    var modelOptions = extend({ forceId: false }, options.options);
+    var Model = loopback.PersistedModel.extend(options.parent, options.properties,
+        modelOptions);
+    if (options.app) options.app.model(Model);
+    if (options.datasource) Model.attachTo(options.datasource);
+    return Model;
+}

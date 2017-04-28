@@ -16,8 +16,8 @@
     "shelljs": "^0.2.6"
   },
   "scripts": {
-    "postinstall": "bower install",
-    "prestart": "npm install",
+    "1postinstal": "bower install",
+    "1prestart": "npm install",
     "start": "node Server.js",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",

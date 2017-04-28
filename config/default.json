@@ -1,0 +1,11 @@
+{
+  "db": {
+    "hostname": "localhost",
+    "hostPort": 3335,
+    "port": 8000,
+    "defaultHostPath": "/"
+  },
+  "webserver":{
+    "port":"3000"
+  }
+}
